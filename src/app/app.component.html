@@ -1,8 +1,11 @@
-<div>
-  <h2>wikipedia search</h2>
-  <input (input)="term$.next($event.target.value)">
-  <ul>
-    <li *ngFor="let item of items; index as i">
+  <nav class="navbar sticky-top navbar-dark bg-primary">
+    <a class="navbar-brand" href="#!">Wikipedia Search Api</a>
+    <input class="center-block" (input)="term$.next($event.target.value)" placeholder="Type Here...">
+  </nav>
+
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of items; index as i">
         <a href="{{links[i]}}">{{item}}</a>
     </li>
   </ul>
